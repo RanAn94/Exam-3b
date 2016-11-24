@@ -131,7 +131,7 @@ public class ReadQuery
                 table += "</td>";                
                 
                 table += "<td>";
-                table += "<a href=update?movieID="+customer.getCustID()+"> Update</a>"+"<a href=delete?movieID="+customer.getCustID()+"> Delete</a>";
+                table += "<a href=update?custID="+customer.getCustID()+"> Update</a>"+"<a href=delete?custID="+customer.getCustID()+"> Delete</a>";
                 table += "</td>";
                 
                 table += "</tr>";
