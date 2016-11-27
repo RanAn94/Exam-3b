@@ -76,7 +76,7 @@ public class AddServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
              //get the data
-            String fname = request.getParameter("fname");
+            String fname =request.getParameter("fname");      
             String lname = request.getParameter("lname");
             String add1 = request.getParameter("add1");
             String add2 = request.getParameter("add2");            
