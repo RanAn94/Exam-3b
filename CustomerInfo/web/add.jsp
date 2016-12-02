@@ -5,6 +5,28 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Add New Customer's Information</title>
         <link rel="stylesheet" type="text/css" href="style.css" />
+        
+        <script type="text/javascript">
+            var invalid = 0;
+            function Validate()
+            {
+                invalid=0;
+                var fname = document.getElementById("fname").value;
+                if(fname ==="1")
+                {
+                    document.getElementById("fname_error").innerHTML = "Please enter a valid First Name.";
+                    invalid +=1;
+                    
+                }
+                else
+                {
+                    document.getElementById("fname_error").innerHTML = ""; 
+                }                
+            }
+            
+            
+        </script>    
+        
     </head>
     <body>
         <div class="wrap">
@@ -12,14 +34,14 @@
             <%@ include file="includes/header.jsp"%>
             <!--Menu-->
             <%@ include file="includes/menu.jsp"%>
-        
             <div class="main">
             <h1>Add New Customer Information</h1>
-            <form name="addForm" action="addCustomer" method="get">
+            <form name="addForm" action="addCustomer" method="get" onsubmit="return Validate();">
             <table class="add">
             <tr>
                 <td><label>First Name:</label></td>
-                <td><input type="text" name="fname" value=""/></td>
+                <td><input type="text" name="fname" id="fname" value=""/>
+                <span id="fname_error" class="error"></span></td>
             </tr>
         
             <tr>
@@ -58,7 +80,7 @@
             </tr>
             
             <tr>
-            <td><input type="submit" name="submit" value="Submit"/></td>
+            <td><input type="submit" name="submit" value="Submit" onclick="validate();"></td>
             <td><input type="reset" value="Clear" id="clear"></td>
             </tr>
             </table>
@@ -68,4 +90,6 @@
         <%@ include file="includes/footer.jsp"%>
         </div>
     </body>
-</html>
+</html>  
+    
+    

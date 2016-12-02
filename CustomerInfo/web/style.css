@@ -5,8 +5,7 @@ table{border:5px solid white;}
 .update td{border:none; height:25px;padding:10px;ffont-weight:bold;}
 .add td{border:none; height:25px;padding:10px;ffont-weight:bold;}
 input[readonly]{background-color:gray;}
-
-
+#fname_error{color:red;}
 
 
 table
