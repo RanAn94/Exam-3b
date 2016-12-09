@@ -11,7 +11,7 @@
     <body>
         <h1>Update Customer Information</h1>
         
-        <form name="updateForm" action="updateCustomer" method="get">
+        <form name="updateForm" action="updateCustomer" method="post">
             <table class="update">
                 
             <tr>

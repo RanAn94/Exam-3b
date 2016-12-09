@@ -12,19 +12,18 @@
             {
                 invalid=0;
                 var fname = document.getElementById("fname").value;
-                if(fname ==="1")
+                if(fname ==="Ran An")
                 {
                     document.getElementById("fname_error").innerHTML = "Please enter a valid First Name.";
                     invalid +=1;
+                    return false;
                     
                 }
                 else
                 {
-                    document.getElementById("fname_error").innerHTML = ""; 
+                    document.getElementById("fname_error").innerHTML =0 ""; 
                 }                
             }
-            
-            
         </script>    
         
     </head>
@@ -36,7 +35,7 @@
             <%@ include file="includes/menu.jsp"%>
             <div class="main">
             <h1>Add New Customer Information</h1>
-            <form name="addForm" action="addCustomer" method="get" onsubmit="return Validate();">
+            <form name="addForm" action="addCustomer" method="post" onsubmit="return Validate();">
             <table class="add">
             <tr>
                 <td><label>First Name:</label></td>
@@ -51,7 +50,7 @@
             
             <tr>
                 <td><label>Add1:</label></td>
-                <td><input type="text" name="add1" value=""/></td>
+                <td><input type="text" name="add1" value="" required/></td>
             </tr>
             
             <tr>
@@ -76,7 +75,7 @@
         
             <tr>
                 <td><label>Email Address:</label></td>
-                <td><input type="text" name="emailAddr" value=""/></td>
+                <td><input type="email" name="emailAddr" value=""/></td>
             </tr>
             
             <tr>

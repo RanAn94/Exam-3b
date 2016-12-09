@@ -14,7 +14,7 @@
             <%@ include file="includes/menu.jsp"%>
         <div class="main">
         <h1>Customers' Contact Information</h1>
-        <a href="read">View All Contact Information</a>
+        <a href="customerread">View All Contact Information</a>
         <br><br>
         <a href="search.jsp">Search Information</a>
         </div>

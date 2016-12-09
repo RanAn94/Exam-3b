@@ -12,67 +12,68 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Customers;
 
-public class SearchQuery 
+
+public class CustomerReadQuery 
 {
     private Connection conn;
     private ResultSet results;
     
-    public SearchQuery()
+    public CustomerReadQuery()
     {
         Properties props = new Properties();
-        InputStream instr = getClass().getResourceAsStream("dbConn.properties");    
+        InputStream instr = getClass().getResourceAsStream("dbConn.properties");
         try 
         {
             props.load(instr);
         } 
         catch (IOException ex) 
         {
-            Logger.getLogger(SearchQuery.class.getName()).log(Level.SEVERE, null, ex);
-        }
+            Logger.getLogger(CustomerReadQuery.class.getName()).log(Level.SEVERE, null, ex);
+        }      
         try 
         {
             instr.close();
         } 
         catch (IOException ex) 
         {
-            Logger.getLogger(SearchQuery.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(CustomerReadQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         String driver = props.getProperty("driver.name");
         String url = props.getProperty("server.name");
         String username = props.getProperty("user.name");
-        String passwd = props.getProperty("user.password");        
-        
+        String passwd = props.getProperty("user.password");
         try 
         {
             Class.forName(driver);
         } 
         catch (ClassNotFoundException ex) 
         {
-            Logger.getLogger(SearchQuery.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(CustomerReadQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
         try 
-        {        
+        {
             conn = DriverManager.getConnection(url, username, passwd);
         } 
         catch (SQLException ex) 
         {
-            Logger.getLogger(SearchQuery.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(CustomerReadQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
-    public void doSearch(String name)
+    public void doRead()
     {
-            try {
-                String query = "Select * from customers WHERE UPPER(firstName) LIKE ? OR UPPER(lastName) LIKE ? ORDER BY custID ASC";
-                PreparedStatement ps = conn.prepareStatement(query);
-                ps.setString(1,"%" + name.toUpperCase() + "%");
-                ps.setString(2,"%" + name.toUpperCase() + "%");                
-                this.results = ps.executeQuery();
-            } catch (SQLException ex) {
-                Logger.getLogger(SearchQuery.class.getName()).log(Level.SEVERE, null, ex);
-            }
-    }      
+        try
+        {
+            String query = "Select * from customers ORDER BY custID ASC";
+            PreparedStatement ps = conn.prepareStatement(query);
+            this.results = ps.executeQuery();
+        } 
+        catch (SQLException ex) 
+        {
+            Logger.getLogger(CustomerReadQuery.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
     
     public String getHTMLTable()
     {
@@ -87,7 +88,7 @@ public class SearchQuery
                 customer.setLastName(this.results.getString("lastName"));
                 customer.setAdd1(this.results.getString("add1"));
                 customer.setAdd2(this.results.getString("add2"));
-                customer.setCity(this.results.getString("city"));                
+                customer.setCity(this.results.getString("city"));
                 customer.setState(this.results.getString("state"));                
                 customer.setZip(this.results.getInt("zip"));
                 customer.setEmailAddr(this.results.getString("emailAddr"));
@@ -127,22 +128,18 @@ public class SearchQuery
                 table += "</td>";
                 
                 table += "<td>";
-                table += customer.getEmailAddr();                     
+                table += customer.getEmailAddr();
                 table += "</td>";                
-                
-                table += "<td>";
-                table += "<a href=update?custID="+customer.getCustID()+"> Update</a>"+"<a href=delete?custID="+customer.getCustID()+"> Delete</a>";
-                table += "</td>";
-                
+
                 table += "</tr>";
             }
         } 
         catch (SQLException ex) 
         {
-            Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(CustomerReadQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         table += "</table>";
         return table;   
-    } 
+    }        
 }

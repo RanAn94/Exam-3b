@@ -14,7 +14,7 @@
             <%@ include file="includes/menu.jsp"%>
             <div class="main">
                 <h1>Search Customers' Information</h1>
-                    <form name="searchForm" action="search" method="get">
+                    <form name="searchForm" action="search" method="post">
                         
                     <input type="text" name="searchVal" value=""/>
                     <br>                                                                  

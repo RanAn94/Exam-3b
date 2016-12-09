@@ -1,17 +1,23 @@
-body{background:#D2B48C}
-th,td{border:1px solid white;}
-table{border:5px solid white;}
+body{background:lightblue;}
 
+.read{border:2px;border-color: slategray;border-collapse: collapse;}
+.insert{border-collapse: collapse; border:none;background-color: lightblue;}
 .update td{border:none; height:25px;padding:10px;ffont-weight:bold;}
 .add td{border:none; height:25px;padding:10px;ffont-weight:bold;}
-input[readonly]{background-color:gray;}
-#fname_error{color:red;}
-
+.donate td{border:none; height:25px;padding:10px;ffont-weight:bold;}
+input[readonly]{background-color:#D1C3B8;}
+select{width:120px;}
+#txtbox{width:500px; height:18px;}
+p{text-indent: 50px}
+.error{color: red;}
 
 table
 {
-    border-collapse: collapse;
-    width: 100%
+    background-color: white;
+    width: 100%;
+    color:black;
+   
+    
 }
 
 th{
@@ -23,30 +29,32 @@ th{
 }
 
 td{
-    height:50px;
+    height:25px;
     vertical-align:middle;
         padding:15px;
+        
 }
 
-tr:hover {background-color: #D15D5D;}
+tr:hover {background-color: lightskyblue;}
 tr 
 {
-    background-color: #F08080;
-    color:#FFFFFF;
+    color:black;
+    border:5px;
 }
 h1
 {
-    background-color: #F08080;
+    background-color: slateblue;
     color:#FFFFFF;
-    border-collapse: collapse;
-    border:1px solid white;
+    font-size: 40px;
+    padding-left: 10px;
+    padding: 20px;
 }
 label
 {
-    background-color: #F08080;
-    color:#FFFFFF;
+    
+    color:black;
     border-collapse: collapse;
-    border:1px solid white;
+   
 }
 
 .wrap
@@ -56,18 +64,18 @@ text-align:center;width:90%;margin:0 auto;border:1px solid black; margin-top:25p
 
 .header
 {
-	background-color:tan;text-align:left;padding:25px;
+	background-color:darkcyan;text-align:left;padding:25px;font-size: 25pt;color:white;
 }
 .headerImg
 {
 	float:left;
-	width:200px;
+	width:250px;
 }
 .headerText
 {
 	float:left;
 	height:105px;
-	padding-top:50px;padding-left:25px;
+	
 }
 
 
