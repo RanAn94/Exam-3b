@@ -14,28 +14,18 @@
                 var fname = document.getElementById("fname").value;
                 if(fname !=="msci330001")
                 {
-                    document.getElementById("fname_error").innerHTML = "Please enter a correct User Name.";
+                    alert("The User Name is incorrect, please re-enter it.");  
+                    return false; 
                     invalid +=1;
-                    return false;
-                    
-                }
-                else
-                {
-                    document.getElementById("fname_error").innerHTML = ""; 
                 }
                 
                 var password = document.getElementById("password").value;
                 if(password !=="msci330001")
                 {
-                    document.getElementById("password_error").innerHTML = "Please enter a correct password.";
+                    alert("The Password is incorrect, please re-enter it.");  
                     invalid +=1;
-                    return false;
-                    
+                    return false;                   
                 }
-                else
-                {
-                    document.getElementById("password_error").innerHTML = ""; 
-                } 
             }
         </script>    
         
@@ -52,14 +42,12 @@
                     <table class="add">
                         <tr>
                             <td><label>User Name:</label></td>
-                            <td><input type="text" name="fname" id="fname" value="" required/>
-                            <span id="fname_error" class="error"></span></td>
+                            <td><input type="text" name="fname" id="fname" value="" required/></td>
                         </tr>
         
                         <tr>
                             <td><label>Password:</label></td>
-                            <td><input type="password" name="password" id="password" value="" required/>
-                            <span id="password_error" class="error"></span></td>
+                            <td><input type="password" name="password" id="password" value="" required/></td>
                         </tr>
             
                         <tr>
