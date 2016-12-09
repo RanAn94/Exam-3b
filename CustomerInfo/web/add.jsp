@@ -39,13 +39,13 @@
             <table class="add">
             <tr>
                 <td><label>First Name:</label></td>
-                <td><input type="text" name="fname" id="fname" value=""/>
+                <td><input type="text" name="fname" id="fname" value="" required/>
                 <span id="fname_error" class="error"></span></td>
             </tr>
         
             <tr>
                 <td><label>Last Name:</label></td>
-                <td><input type="text" name="lname" value=""/></td>
+                <td><input type="text" name="lname" value="" required/></td>
             </tr>
             
             <tr>
@@ -55,27 +55,27 @@
             
             <tr>
                 <td><label>Add2:</label></td>
-                <td><input type="text" name="add2" value=""/></td>
+                <td><input type="text" name="add2" value=""required/></td>
             </tr> 
             
             <tr>
                 <td><label>City:</label></td>
-                <td><input type="text" name="city" value=""/></td>
+                <td><input type="text" name="city" value=""required/></td>
             </tr>            
 
             <tr>
                 <td><label>State:</label></td>
-                <td><input type="text" name="state" value=""/></td>
+                <td><input type="text" name="state" value=""required/></td>
             </tr>
             
             <tr>
                 <td><label>Zip Code:</label></td>
-                <td><input type="text" name="zip" value=""/></td>
+                <td><input type="text" name="zip" value=""required/></td>
             </tr>
         
             <tr>
                 <td><label>Email Address:</label></td>
-                <td><input type="email" name="emailAddr" value=""/></td>
+                <td><input type="email" name="emailAddr" value=""required/></td>
             </tr>
             
             <tr>

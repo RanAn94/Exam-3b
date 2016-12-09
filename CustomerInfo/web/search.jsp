@@ -16,7 +16,7 @@
                 <h1>Search Customers' Information</h1>
                     <form name="searchForm" action="search" method="post">
                         
-                    <input type="text" name="searchVal" value=""/>
+                    <input type="text" name="searchVal" value="" required/>
                     <br>                                                                  
                     
                     <input type="submit" name="submit" value="Search"/>

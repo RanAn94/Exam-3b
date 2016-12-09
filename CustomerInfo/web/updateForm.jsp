@@ -27,46 +27,46 @@
             
             <tr>
                 <td><label>First Name:</label></td>
-                <td><input type="text" name="fname" value="<%=customer.getFirstName()%>"/></td>
+                <td><input type="text" name="fname" value="<%=customer.getFirstName()%>" required/></td>
             </tr>
 
             <tr>
                 <td><label>Last Name:</label></td>
-                <td><input type="text" name="lname" value="<%=customer.getLastName()%>"/></td>
+                <td><input type="text" name="lname" value="<%=customer.getLastName()%>" required/></td>
             </tr>
             
             <tr>
                 <td><label>Add1:</label></td>
-                <td><input type="text" name="add1" value="<%=customer.getAdd1()%>"/></td>
+                <td><input type="text" name="add1" value="<%=customer.getAdd1()%>" required/></td>
             </tr>
 
             <tr>
                 <td><label>Add2:</label></td>
-                <td><input type="text" name="add2" value="<%=customer.getAdd2()%>"/></td>
+                <td><input type="text" name="add2" value="<%=customer.getAdd2()%>" required/></td>
             </tr>            
             
             <tr>
                 <td><label>City:</label></td>
-                <td><input type="text" name="city" value="<%=customer.getCity()%>"/></td>
+                <td><input type="text" name="city" value="<%=customer.getCity()%>" required/></td>
             </tr>            
 
             <tr>
                 <td><label>State:</label></td>
-                <td><input type="text" name="state" value="<%=customer.getState()%>"/></td>
+                <td><input type="text" name="state" value="<%=customer.getState()%>" required/></td>
             </tr>            
             
             <tr>
                 <td><label>Zip:</label></td>
-                <td><input type="text" name="zip" value="<%=customer.getZip()%>"/></td>
+                <td><input type="text" name="zip" value="<%=customer.getZip()%>" required/></td>
             </tr>            
 
             <tr>
                 <td><label>Email Address:</label></td>
-                <td><input type="text" name="emailAddr" value="<%=customer.getEmailAddr()%>"/></td>
+                <td><input type="text" name="emailAddr" value="<%=customer.getEmailAddr()%>" required/></td>
             </tr>               
             <tr>
                 <td><input type="submit" name="submit" value="Update"/></td>
-                <td><input type="reset" value="Clear" name="reset"></td>
+                <td><input type="reset" value="Reset" name="reset"></td>
             </tr>
             </table>
         </form>
