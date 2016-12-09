@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Customers' Contact Information</title>
+        <title>Search Customer</title>
         <link rel="stylesheet" type="text/css" href="style.css" />
     </head>
     <body>
@@ -12,12 +12,16 @@
             <%@ include file="includes/header.jsp"%>
             <!--Menu-->
             <%@ include file="includes/menu.jsp"%>
-        <div class="main">
-        <h1>Customers' Contact Information</h1>
-        <a href="customerread">View All Contact Information</a>
-        <br><br>
-        <a href="customersearch.jsp">Search Information</a>
-        </div>
+            <div class="main">
+                <h1>Search Customers' Information</h1>
+                    <form name="searchForm" action="customersearch" method="post">
+                        
+                    <input type="text" name="searchVal" value=""/>
+                    <br>                                                                  
+                    
+                    <input type="submit" name="submit" value="Search"/>
+                    </form>
+            </div>
         <!--Footer-->
         <%@ include file="includes/footer.jsp"%>
         </div>
