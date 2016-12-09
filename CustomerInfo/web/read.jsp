@@ -15,7 +15,7 @@
             <!--Header-->
             <%@ include file="includes/header.jsp"%>
             <!--Menu-->
-            <%@ include file="includes/menu.jsp"%>
+            <%@ include file="includes/menu2.jsp"%>
        
             <div class="main">
                 <h1>Contact Info</h1>

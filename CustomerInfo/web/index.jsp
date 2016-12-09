@@ -16,7 +16,7 @@
         <h1>Customers' Contact Information</h1>
         <a href="customerread">View All Contact Information</a>
         <br><br>
-        <a href="customersearch.jsp">Search Information</a>
+        <a href="Login.jsp">Administrator Log In</a>
         </div>
         <!--Footer-->
         <%@ include file="includes/footer.jsp"%>

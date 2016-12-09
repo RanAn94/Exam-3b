@@ -32,7 +32,7 @@
             <!--Header-->
             <%@ include file="includes/header.jsp"%>
             <!--Menu-->
-            <%@ include file="includes/menu.jsp"%>
+            <%@ include file="includes/menu2.jsp"%>
             <div class="main">
             <h1>Add New Customer Information</h1>
             <form name="addForm" action="addCustomer" method="post" onsubmit="return Validate();">

@@ -9,6 +9,12 @@
         <link rel="stylesheet" type="text/css" href="style.css" />
     </head>
     <body>
+        <div class="wrap">
+            <!--Header-->
+            <%@ include file="includes/header.jsp"%>
+            <!--Menu-->
+            <%@ include file="includes/menu2.jsp"%>
+                        <div class="main">
         <h1>Update Customer Information</h1>
         
         <form name="updateForm" action="updateCustomer" method="post">
@@ -64,5 +70,9 @@
             </tr>
             </table>
         </form>
+            </div>
+        <!--Footer-->
+        <%@ include file="includes/footer.jsp"%>
+        </div>            
     </body>
 </html>
