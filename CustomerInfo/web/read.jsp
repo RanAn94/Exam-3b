@@ -2,9 +2,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Contact Info</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="ID=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">       
+
+        <title>Contact Info</title>
+
     </head>
     
     <% String table = (String) request.getAttribute("table"); %>
@@ -18,9 +23,12 @@
             <%@ include file="includes/menu2.jsp"%>
        
             <div class="main">
-                <h1>Contact Info</h1>
+                <div class="container">
+                    <div class="jumbotron">
+                        <h3>Contact Information Table</h3>
+                    </div> 
                     <div style="overflow-x:auto;">
-                        <table>
+                        <table class="table table-bordered">
                             <tr>
                                 <th> CustomerID </th>
                                 <th> First Name </th>
@@ -35,15 +43,18 @@
                             </tr>
                             <%= table %>
                         </table>
-                    </div>
-                    <br><br>
-                    <a href ="add">Add New Contact Information</a>
-                    <br><br>
-                    <a href="search.jsp">Search Information</a>
+                    </div >
+                    <div style="overflow-x:auto;">
+                
+                        <%@ include file="includes/addbutton.jsp"%>
+                </div>  
+                </div>
             </div>
-        
+
         <!--Footer-->
         <%@ include file="includes/footer.jsp"%>
-    </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>        
     </body>
 </html>

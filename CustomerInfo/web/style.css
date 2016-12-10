@@ -4,9 +4,8 @@ body{background:lightblue;}
 .insert{border-collapse: collapse; border:none;background-color: lightblue;}
 .update td{border:none; height:25px;padding:10px;ffont-weight:bold;}
 .add td{border:none; height:25px;padding:10px;ffont-weight:bold;}
-.donate td{border:none; height:25px;padding:10px;ffont-weight:bold;}
 input[readonly]{background-color:#D1C3B8;}
-select{width:120px;}
+select{width:120px; float: left;}
 #txtbox{width:500px; height:18px;}
 p{text-indent: 50px}
 .error{color: red;}
@@ -16,8 +15,6 @@ table
     background-color: white;
     width: 100%;
     color:black;
-   
-    
 }
 
 th{
@@ -31,8 +28,7 @@ th{
 td{
     height:25px;
     vertical-align:middle;
-        padding:15px;
-        
+        padding:15px;     
 }
 
 tr:hover {background-color: lightskyblue;}
@@ -43,39 +39,41 @@ tr
 }
 h1
 {
-    background-color: slateblue;
+    background-color: #86D0DF;
     color:#FFFFFF;
     font-size: 40px;
     padding-left: 10px;
     padding: 20px;
 }
+
 label
-{
-    
+{   
     color:black;
-    border-collapse: collapse;
-   
+    border-collapse: collapse;  
 }
 
 .wrap
 {
-text-align:center;width:90%;margin:0 auto;border:1px solid black; margin-top:25px;
+text-align:center;
+width:90%;
+margin:0 auto;
+
+margin-top:25px;
 }
 
 .header
 {
-	background-color:darkcyan;text-align:left;padding:25px;font-size: 25pt;color:white;
+    background-color:#86D0DF;text-align:left;padding:25px;font-size: 25pt;color:white;
 }
 .headerImg
 {
-	float:left;
-	width:250px;
+    float:left;
+    width:250px;
 }
 .headerText
 {
-	float:left;
-	height:105px;
-	
+    float:left;
+    height:105px;	
 }
 
 
@@ -85,16 +83,16 @@ text-align:center;width:90%;margin:0 auto;border:1px solid black; margin-top:25p
 /*Fat Erik's Pipelist*/
 .navlist
 {
-list-style: none;
-padding: 0;
-margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .navlist li
 {
-display: inline;
-padding: 0;
-margin: 0;
+    display: inline;
+    padding: 0;
+    margin: 0;
 }
 
 .navlist li:before { content: "| "; }
@@ -104,9 +102,9 @@ margin: 0;
 /*All IE browsers*/
 * html .navlist li
 {
-border-left: 1px solid black;
-padding: 0 0.4em 0 0.4em;
-margin: 0 0.4em 0 -0.4em;
+    border-left: 1px solid black;
+    padding: 0 0.4em 0 0.4em;
+    margin: 0 0.4em 0 -0.4em;
 }
 
 /*Win IE browsers - hide from Mac IE\*/
@@ -114,14 +112,14 @@ margin: 0 0.4em 0 -0.4em;
 
 * html .navlist li
 {
-display: block;
-float: left;
+    display: block;
+    float: left;
 }
 .main
 {
-text-align:left;padding:25px;	
+    text-align:left;padding:25px;	
 }
 .footer
 {
-    text-align:left;padding:25px;
+    text-align:center;padding:25px;
 }
