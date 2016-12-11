@@ -22,7 +22,7 @@
                                         </div>   
             
                                         <div class="form-group">
-                                            <label class="control-label col-sm-3" for="lname">last Name:</label>
+                                            <label class="control-label col-sm-3" for="lname">Last Name:</label>
                                             <div class="col-sm-6 ">
                                             <input type="text" class="form-control" name="lname" id="lname" value="" required/>
                                             </div>
