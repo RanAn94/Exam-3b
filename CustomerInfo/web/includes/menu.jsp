@@ -80,11 +80,15 @@
         </ul>                
         </div>    
     </div>
-    <div class="col-sm-4">
-        <form name="searchForm" action="customersearch" method="post" class="pull-right">
-            <span class="glyphicon glyphicon-search"></span>
-            <input type="text" name="searchVal" value=""/>
-            <input type="submit" name="submit" value="Search" class="btn btn-default btn-sm"/>
-        </form>
+    <div class="col-sm-3 col-md-2 pull-right">
+                <form class="navbar-form" role="search" action="customersearch" method="post">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="searchVal" id="searchVal">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit" name="submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
     </div>
-</div> 
+</div>
+
